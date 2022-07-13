@@ -90,8 +90,8 @@ class _SliderBoxState extends State<SliderBox> {
           Slider(
             activeColor: Colors.amber,
             inactiveColor: Colors.amber.shade100,
-            min: 100,
-            max: 200,
+            min: widget.minValue,
+            max: widget.maxValue,
             value: slideValue,
             onChanged: (value) {
               setState(() {

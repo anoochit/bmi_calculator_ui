@@ -16,14 +16,17 @@ class BigButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: width,
-      height: height,
-      child: ElevatedButton(
-        onPressed: () {},
-        child: Text(
-          text.toUpperCase(),
-          style: const TextStyle(fontSize: 22),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 4.0),
+      child: SizedBox(
+        width: width,
+        height: height,
+        child: ElevatedButton(
+          onPressed: () {},
+          child: Text(
+            text.toUpperCase(),
+            style: const TextStyle(fontSize: 22),
+          ),
         ),
       ),
     );
