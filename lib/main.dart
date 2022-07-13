@@ -26,6 +26,15 @@ class MyApp extends StatelessWidget {
             fontSize: 22.0,
           ),
         ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12.0),
+              ),
+            ),
+          ),
+        ),
       ),
       home: HomePage(),
     );
