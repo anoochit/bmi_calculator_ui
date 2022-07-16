@@ -22,37 +22,34 @@ class GenderButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(3.0),
-      child: Container(
-        clipBehavior: Clip.antiAliasWithSaveLayer,
-        width: width,
-        height: height,
-        decoration: BoxDecoration(
-          color: (selected) ? Colors.white.withOpacity(0.15) : Colors.white.withOpacity(0.05),
-          borderRadius: BorderRadius.circular(12.0),
-        ),
-        child: Material(
-          child: InkWell(
-            onTap: () => onTab,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  icon,
-                  color: iconColor,
-                  size: width * 0.4,
+    return Container(
+      clipBehavior: Clip.antiAliasWithSaveLayer,
+      width: width,
+      height: height,
+      decoration: BoxDecoration(
+        color: (selected) ? Colors.white.withOpacity(0.15) : Colors.white.withOpacity(0.05),
+        borderRadius: BorderRadius.circular(12.0),
+      ),
+      child: Material(
+        child: InkWell(
+          onTap: () => onTab,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                icon,
+                color: iconColor,
+                size: width * 0.4,
+              ),
+              Text(
+                title.toUpperCase(),
+                style: TextStyle(
+                  color: Colors.white.withOpacity(0.4),
+                  fontSize: 20.0,
                 ),
-                Text(
-                  title.toUpperCase(),
-                  style: TextStyle(
-                    color: Colors.white.withOpacity(0.4),
-                    fontSize: 20.0,
-                  ),
-                )
-              ],
-            ),
+              )
+            ],
           ),
         ),
       ),
